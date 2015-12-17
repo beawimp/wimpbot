@@ -4,6 +4,7 @@
   "private": true,
   "author": "Cole Geissinger <cole@beawimp.org>",
   "description": "Productive or not. WIMPbot is there for you.",
+  "cacheDirectories": ["bower_components", "public/build" ],
   "dependencies": {
     "hubot": "^2.17.0",
     "hubot-diagnostics": "0.0.1",
