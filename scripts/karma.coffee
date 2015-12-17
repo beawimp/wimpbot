@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   <thing>++ - give thing some karma
-#   <thing>-- - take away some of thing's karma
-#   hubot karma <thing> - check thing's karma (if <thing> is omitted, show the top 5)
-#   hubot karma empty <thing> - empty a thing's karma
+#   @<name>: ++ - give thing some karma
+#   @<name>: -- - take away some of thing's karma
+#   hubot karma @<name>: - check thing's karma (if <thing> is omitted, show the top 5)
+#   hubot karma empty @<name>: - empty a thing's karma
 #   hubot karma best - show the top 5
 #   hubot karma worst - show the bottom 5
 #
