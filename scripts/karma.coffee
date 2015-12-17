@@ -106,7 +106,7 @@ class Karma
 
 module.exports = (robot) ->
   karma = new Karma robot
-  robot.hear /(@\S+)[ ]*\+\+(\s|$)/, (msg) ->
+  robot.hear /(@\S+):\s\+\+(\s|$)/g, (msg) ->
     user = "@" + msg.message.user.mention_name
     subject = msg.match[1].toLowerCase()
     if ( subject != user )
@@ -115,7 +115,7 @@ module.exports = (robot) ->
     else
       msg.send "#{subject} Naughty naughty, no self-karma."
 
-  robot.hear /(@\S+)[ ]*--(\s|$)/, (msg) ->
+  robot.hear /(@\S+):\s--(\s|$)/g, (msg) ->
     user = "@" + msg.message.user.mention_name
     subject = msg.match[1].toLowerCase()
     if ( subject != user )
@@ -124,7 +124,7 @@ module.exports = (robot) ->
     else
       msg.send "#{subject} Naughty naughty, no self-karma."
 
-  robot.hear /(@\S+)[ ]*(\+\-|\-\+)(\s|$)/, (msg) ->
+  robot.hear /(@\S+)[ ]*(\+\-|\-\+)(\s|$)/g, (msg) ->
     user = "@" + msg.message.user.mention_name
     subject = msg.match[1].toLowerCase()
     msg.send "#{subject} #{karma.neutralResponse()} (Karma: [still] #{karma.get(subject)})"
