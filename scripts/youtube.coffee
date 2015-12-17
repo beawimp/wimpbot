@@ -27,7 +27,7 @@ module.exports = (robot) ->
         videos = JSON.parse(body)
         videos = videos.items
 
-        unless videos? && videos.length > 0
+        if videos.length is 0
           return msg.send "No video results for \"#{query}\""
 
         video  = msg.random videos
