@@ -7,7 +7,7 @@
 #     the top result from the YouTube search
 #
 # Commands:
-#   hubot youtube me <query> - Searches YouTube for the query and returns the video embed link.
+#   wimpbot youtube me <query> - Searches YouTube for the query and returns the video embed link.
 module.exports = (robot) ->
   robot.respond /(?:youtube|yt)(?: me)? (.*)/i, (msg) ->
     unless process.env.HUBOT_YOUTUBE_API_KEY
